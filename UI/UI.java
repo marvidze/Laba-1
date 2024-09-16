@@ -9,7 +9,6 @@ public class UI {
     static public boolean input() {
         try {
             System.out.println("Введите n чисел");
-            ;
             @SuppressWarnings("resource")
             Scanner scan = new Scanner(System.in);
             String line = scan.nextLine();
