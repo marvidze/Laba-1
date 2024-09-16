@@ -4,16 +4,12 @@ import java.util.Scanner;
 import realization.Number;
 
 public class UI {
-    /*
-     * выводит на консоль
-     */
-    static public void print(String line) {
-        System.out.println(line);
-    }
 
+    // получает числа с консоли и передаёт в метод splitLine
     static public boolean input() {
         try {
-            UI.print("Введите n чисел");
+            System.out.println("Введите n чисел");
+            ;
             @SuppressWarnings("resource")
             Scanner scan = new Scanner(System.in);
             String line = scan.nextLine();
@@ -26,6 +22,7 @@ public class UI {
 
     }
 
+    // выводит простые числа на консоль
     static public void printSimpleNumbers() {
         System.out.println("Простые числа: ");
         String simpleLine = Number.createSimpleLine();

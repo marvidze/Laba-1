@@ -6,13 +6,19 @@ public class Number {
     // простое ли числовое значение объекта
     private boolean _isSimple;
 
+    // массив элементов Number
     private static Number[] arrayNumbers;
+
+    // конструктор по умолчанию
+    public Number() {
+        _value = 0;
+        _isSimple = true;
+    }
 
     /*
      * конструктор класса Number определяет значение полей ._value и ._isSimple
      * принимает int value - числовое значение объекта
      */
-
     public Number(int value) {
         _value = value;
 
@@ -27,26 +33,7 @@ public class Number {
             _isSimple = true;
     }
 
-    /*
-     * разделяет полученную строку и добавляет объекты в массив
-     * принимает String line - строка с числами через пробел
-     * возврещает arrayNumbers - массив из чисел строки line
-     */
-
-    // static public String[] createSimpleArray() {
-
-    // String[] simpleArray = new String[arrayNumbers.length];
-    // int index = 0;
-    // for (int i = 0; i < arrayNumbers.length; i++) {
-    // if (arrayNumbers[i]._isSimple == true) {
-    // simpleArray[index] = Integer.toString(arrayNumbers[i]._value);
-    // index++;
-    // }
-    // }
-
-    // return simpleArray;
-    // }
-
+    // делит полученную строку на числа и создаёт массив типа Number
     static public Number[] splitLine(String line) {
         String[] arrayLine = line.split(" ");
         arrayNumbers = new Number[arrayLine.length];
@@ -58,6 +45,7 @@ public class Number {
         return arrayNumbers;
     }
 
+    // создаёт строку простых чисел для вывда на консоль
     static public String createSimpleLine() {
         String simpleLine = "";
 
